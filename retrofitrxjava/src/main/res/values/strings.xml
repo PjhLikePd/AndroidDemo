@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RetrofitRxJava</string>
+    <string name="get_data">GET DATA</string>
+    <string name="wating_for_data">wating for data...</string>
 </resources>

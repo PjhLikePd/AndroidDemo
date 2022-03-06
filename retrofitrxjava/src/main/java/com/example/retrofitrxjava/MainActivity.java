@@ -9,7 +9,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.retrofitrxjava.bean.CarBean;
 import com.example.retrofitrxjava.common.Config;
 import com.example.retrofitrxjava.network.NetWorkManger;
 
