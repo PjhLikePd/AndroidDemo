@@ -1,7 +1,6 @@
 package com.example.retrofitrxjava.network.request;
 
 import com.example.retrofitrxjava.bean.CarBean;
-import com.example.retrofitrxjava.network.response.NetResponse;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -13,5 +12,5 @@ public interface NetRequest {
 
     // 网络接口
     @GET("openapi.do?keyfrom=Yanzhikai&key=2032414398&type=data&doctype=json&version=1.1&q=car")
-    Observable<NetResponse<CarBean>> getCarList();
+    Observable<CarBean> getCarList();
 }

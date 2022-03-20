@@ -13,10 +13,8 @@ import com.example.retrofitrxjava.common.Config;
 import com.example.retrofitrxjava.network.NetWorkManger;
 import com.example.retrofitrxjava.network.schedulers.SchedulerProvider;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
     public void btnClick(View view) {
         Disposable disposable = NetWorkManger.getRequest().getCarList()
                 .compose(SchedulerProvider.getInstance().applySchedulers())
-                .subscribe(response -> {
+                .subscribe(carBean -> {
                     Toast.makeText(MainActivity.this, "get success..........", Toast.LENGTH_SHORT).show();
                     Log.d(Config.BASE_TAG, "accept: get success.......");
-                    textView.setText(String.format("data: %s", response.getData().getQuery()));
+                    textView.setText(String.format("data: %s", carBean.getQuery()));
                 }, throwable -> {
                     Toast.makeText(MainActivity.this, "get fail..........", Toast.LENGTH_SHORT).show();
                     Log.d(Config.BASE_TAG, "accept: get fail.......");
+                    Log.d(Config.BASE_TAG, "fail exception: " + throwable.getMessage());
                 });
         mDdisposables.add(disposable);
     }
