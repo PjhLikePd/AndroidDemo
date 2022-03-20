@@ -8,15 +8,21 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mvpdemos.R;
+import com.example.mvpdemos.base.BaseActivity;
 
-public class CarActivity extends AppCompatActivity implements CarContract.View {
+public class CarActivity extends BaseActivity implements CarContract.View {
     private CarPresenter carPresenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_car);
+
         carPresenter = new CarPresenter(this);
+    }
+
+    @Override
+    protected int getLayout() {
+        return R.layout.activity_car;
     }
 
     public void btnGetCarName(View view) {
