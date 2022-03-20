@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MvpDemos</string>
     <string name="click_simple_mvp">Click Simple Mvp</string>
+    <string name="click_car_mvp">Click Car Mvp</string>
 </resources>

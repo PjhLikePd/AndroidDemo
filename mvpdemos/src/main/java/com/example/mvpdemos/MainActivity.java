@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.mvpdemos.car_mvp.CarActivity;
 import com.example.mvpdemos.simple_mvp.SimpleActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,5 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickSimpleMvp(View view) {
         startActivity(new Intent(this, SimpleActivity.class));
+    }
+
+    public void clickCarMvp(View view) {
+        startActivity(new Intent(this, CarActivity.class));
     }
 }

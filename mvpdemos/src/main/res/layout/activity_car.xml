@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity">
+    >
 
     <Button
-        android:id="@+id/btn_clicksimplemvp"
+        android:id="@+id/btn_getcar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/click_simple_mvp"
-        android:onClick="clickSimpleMvp"
+        android:text="Get Car Name"
+        android:onClick="btnGetCarName"
+        />
+    <TextView
+        android:id="@+id/tv_showname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="car name"
         />
 
-    <Button
-        android:id="@+id/btn_clickcarmvp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/click_car_mvp"
-        android:onClick="clickCarMvp"
-        />
 </LinearLayout>
