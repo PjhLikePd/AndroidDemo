@@ -50,6 +50,7 @@ public class NetWorkManger {
             }
         });
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
                 .build();
