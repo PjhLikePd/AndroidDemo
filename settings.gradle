@@ -1,3 +1,4 @@
+include ':mymusic'
 include ':mvpdemos'
 include ':retrofitrxjava'
 include ':app'
